@@ -1,0 +1,29 @@
+{
+  "name": "qa-automation-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx bddgen && npx playwright test --headed --reporter=line,allure-playwright",
+    "test:ci": "npx bddgen && npx playwright test --reporter=line,allure-playwright",
+    "generate-and-open-reports": "allure generate ./allure-results --clean && allure open ./allure-report",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "Priyanka Arora",
+  "license": "ISC",
+  "description": "QA Automation Playwright",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.3",
+    "playwright-bdd": "^8.4.2",
+    "prettier": "^3.7.4",
+    "prettier-plugin-gherkin": "^3.1.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
+  }
+}
